@@ -1,0 +1,202 @@
+*{
+margin: 0;
+padding: 0;
+
+box-sizing: border-box;
+}
+
+body, input{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    
+    background: #EFEFEF;
+}
+
+body::before {              /* cria um elemento antes do conteudo */
+    content: " ";
+    width: 1440px;
+    height: 436px;
+    position: absolute;     /* cria um bloco por cima da pagina*/
+    top: 0;                 /* garante o posicionamento do bloco*/
+    left: 0;
+    z-index: -1;            /* garante que o bloco vai pra tras do conteudo */
+    background: #535971;
+}
+
+.page{                      /* criado uma pagina para o header virar uma caixa*/
+    width: 750px;
+    margin: auto;
+}
+
+header{                     
+    width:417px;
+    margin-top: 140px;
+}
+
+form{
+    border-radius: 20px 20px 0px 0px;
+    background: #FFF;
+    min-height: 300px;
+    margin-top: 58px; 
+   
+    padding: 64px;
+   
+    display: flex;
+    flex-direction: column; 
+
+}
+
+header h1{                                  /* Titulo principal */
+    font-family: 'Staatliches', cursive;
+    font-size: 48px;
+    line-height: normal;
+    color: #FFF;
+
+    margin-bottom: 18px;                    /* espaçamento do subtitulo para o titulo */
+}
+
+header p{                                   /* Subtitulo */
+    font-family: 'Poppins', sans-serif;
+    color: #FFF;
+    font-size: 20px;
+    line-height: normal;
+}
+
+p{                              /* padroniza do primeira e segunda mentoria */
+    color: #535971;
+    font-family: Staatliches;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px; /* 170% */
+}
+
+.Col-2{
+    display:flex;       /*coloca os 2 campos ao lado do outro*/
+    gap:22px;           /* espaçamento entre os campos*/
+        
+}
+
+
+fieldset{
+    border: none;
+    
+}
+
+fieldset legend{
+    color: #535971;
+    font-family: Staatliches;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34px; /* 141.667% */
+
+    width: 100%;
+    border-bottom: 1px solid #E6E6F0;    /* cria a linha abaixo da legenda */
+    padding-bottom: 8px;                   /* cria o espaçamento da linha para a legenda */
+
+    margin-bottom: 30px;                    /* cria o espaço da linha para o titulo abaixo */                
+
+}
+
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+     margin-bottom: 30px;                              /* espaçamento entre titulo e caixa de texto */
+}
+
+.input-wrapper label{
+    font-size: 14px;
+    line-height: 24px; 
+    color: #4E4958;
+      
+}
+
+.input-wrapper label span{
+    margin-left: 8px;
+    font-size: 12px;
+    line-height: 20px; 
+    color: #C1BCCC;
+ 
+}
+
+.input-wrapper label span:hover{            /* comando para deixar em negrito ao passar o mouse */
+    color: #6c6a71;                 
+}
+
+
+.input-wrapper input{
+    border-radius: 8px;
+    border: 1px solid var(--back-lines-in-white, #E6E6F0);
+    background: var(--shapes-02, #FAFAFC);
+    
+    height: 56px;
+    padding: 0 24px;
+
+    font-size: 16px;
+    line-height: 26px;
+    color: #C1BCCC;
+
+    margin-top: 8px;   /* espaço entre a caixa e o titulo da caixa */    
+}
+
+.input-package input{
+    margin-bottom: 16px;    /* espaço entre a caixa do nome e o titulo do email */ 
+}
+
+.col-primeira{          
+    display: flex;      /*coloca os 3 campos ao lado do outro*/
+    gap: 10px;           /* espaçamento entre os campos*/
+}
+
+.col-primeira > div:nth-child(1){           /*deixa a primeira caixa com 100% do tamanho*/ 
+    width: 100%;
+}
+
+
+.col-segunda{
+    display:flex;       /*coloca os 3 campos ao lado do outro*/
+    gap:10px;           /* espaçamento entre os campos*/
+}
+
+
+.col-segunda > div:nth-child(1){
+    width: 100%;
+}
+
+footer {
+    /*height: 160px;*/
+    background: #535971;
+   
+    display: flex;
+    flex-direction: column;
+    padding: 71px 52px;
+
+    margin-bottom: 366px;
+    /* border-top: 1px solid  #EFEFEF; */
+    border-radius: 0 0 8px 8px;
+}
+
+footer .button{
+    height: 56px;
+    
+    border-radius: 20px;
+    background: #FF5374;
+    
+    color: #FFF;
+    border: 0;
+    font-family: Staatliches;
+    font-size: 20px;
+  
+    font-weight: 400;
+    line-height: 26px; /* 130% */
+}
+
+footer .button:hover{
+    background: #d34461;
+}
+
+input:invalid{
+    border: 1px solid #d34461;
+    ;
+}
